@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Fundraising Page</title>
+    <style>
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+                  
+            color:#000000;
+        }
+        .bg
+        {
+            /* The image used */
+  background-image: url("quality_restoration_20240309122529333.jpg");
+
+/* Full height */
+height: 100%; 
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+margin: 0;
+    padding: 0;
+    
+    background-size: cover;
+   
+    height: 100vh;
+
+        }
+
+        
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            box-shadow: 0 0 20px rgba(195, 31, 31, 0.1);
+            
+        }
+
+        section{
+          
+            padding: 20px;
+            background-color: #2d8ed7ad;
+            border-radius: 36px;
+        }
+
+        h2 {
+            color: #000000;
+        }
+
+        p {
+            font-weight: 500;
+            font-style: italic;
+            color: #000000;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: larger;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+        input[type="text"]::placeholder,
+textarea::placeholder {
+    color: #000000; /* Change the color here */
+    font-style: italic;
+}
+        input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.514); /* Adjust the opacity here */
+}
+
+
+        /*form {
+            max-width: 600px;
+            margin: 20px auto;
+        }*/
+
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            left: 50%;
+            transition: background-color 0.3s ease;
+          /*  margin: 0;
+        position: absolute;
+        top: 69%;
+        left: 50%;
+        transform: translate(-50%, -50%);*/
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+@media only screen and (max-width: 600px) {
+    section, form {
+        width: 90%;
+    }
+}
+
+    </style>
+</head>
+<body> 
+    <div class="bg">
+        <h1 style="padding: 20px; text-align: center;">Tell us here</h1>
+  <div class="container">
+    <section>
+        <label for="">
+        Purpose for Raising Money</label>
+        <input type="text"><br>
+        <label for="">
+            Enter the amount you want to raise
+        </label>
+        <input type="text" placeholder="₹"><br>
+
+        <label for="">Describe briefly why you are raising money and what impact it will make. Convey your message effectively to potential supporters.</label>
+        <textarea id="description" name="description" rows="4" placeholder="Write about your problem..."></textarea>
+    
+    
+
+    
+        <h2>Upload Your Image</h2>
+        <p>Share an image related to your cause. This can help make your fundraising page more personal and compelling.</p>
+        <input type="file" id="fileInput" style="display: none;"> <!-- Hidden file input -->
+    <button class="upload-button" onclick="chooseFile()">Upload</button> <!-- Upload button -->
+    <button class="submit-button" onclick="submitForm()"><a href="" style="color: white; text-decoration: none;">Submit</a></button>
+    </section>
+
+    <script>
+         function chooseFile() {
+            document.getElementById("fileInput").click(); // Click on the hidden file input
+        }
+
+        // Function to handle file selection
+        document.getElementById("fileInput").addEventListener("change", function() {
+            var selectedFile = this.files[0]; // Get the selected file
+            if (selectedFile) {
+                uploadFile(selectedFile); // Call the uploadFile function with the selected file
+            }
+        });
+
+        // Function to handle file upload (replace with your actual upload logic)
+        function uploadFile(file) {
+            alert("File uploaded successfully: " + file.name); // Example alert message for file upload
+            // Replace this with your actual upload logic, such as sending the file to the server
+        }
+        function submitForm() {
+            // Assuming your registration logic here
+            // For demonstration purposes, we'll show a simple alert
+            alert("Registration Successful! Thank you for your donation.");
+            // You can also redirect to another page or perform other actions
+        }
+    </script>
+</div>
+</div>
+</body>
+</html>

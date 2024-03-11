@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-uA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(#0f0c29, #302b63, #24243e);
+}
+.container{
+max-width: 650px;
+padding: 28px;
+margin: 0 28px;
+border-radius: 10px;
+overflow: hidden;
+background-image: linear-gradient(rgb(1, 1, 26),rgb(44, 4, 44));
+box-shadow: 0 15px 20px #1b0212b6;
+}
+h2{
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    padding-bottom: 8px;
+    border-bottom: 1px solid silver;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.input-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+.input-box:nth-child(2n){
+    justify-content: end;
+}
+.input-box label {
+    width: 95%;
+    color: #fff;
+    font-weight: bold;
+    margin: 5px 0;
+}
+.input-box input{
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.input-box input:is(:focus,:valid){
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+.alert p {
+    font-size: 14px;
+    font-style: italic;
+    color: #fff;
+    margin: 5px 0;
+    padding: 10px;
+    line-height: 1.5px: 
+}
+.button-container{
+    margin: 15px 0;
+}
+.button-container button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #aa076b, #61045f);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.button-container button{
+    background-image: linear-gradient(to right,#61045f,#aa076b);
+}
+
+@media(max-width:600px){
+    .container{
+        min-width: 280px;
+    }
+    .content{
+        max-height: 380px;
+        overflow: auto;
+    }
+    .input-box{
+        margin-bottom: 12px;
+        width: 100%;
+    }
+    .input-box:nth-child(2n){
+        justify-content:space-between;
+    }
+    .content::-webkit-scrollbar{
+        width: 5:
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" method="post">
+            <h2>Registration</h2>
+            <div class="content">
+              <div class="input-box">
+            <label for=" first name"> firstname</label>
+            <input type="text" placeholder="Enter first name" name=" firstname" required>
+             </div>
+             <div class="input-box">
+                <label for=" middlename">Middlename</label>
+                <input type=" middlename" placeholder="Enter middlename" name="middlename" required>
+            </div>
+            <div class="input-box">
+                <label for="lastname">Last name</label>
+                <input type="lastname" placeholder="Enter lastname" name="lastname" required>
+            </div>
+            <div class="input-box">
+                <label for="dateofbirth">DateofBirth</label>
+                <input type="date" placeholder="DateofBirth" name="date" required>
+            </div>
+            <div class="input-box">
+                <label for="address">Adress</label>
+                <input type="address" placeholder="Adress " name="address" required>
+            </div>
+            <div class="input-box">
+                <label for="city">city</label>
+                <input type="city" placeholder="city" name="city" required>
+            </div>
+            <div class="input-box">
+                <label for="state">State</label>
+                <input type="state" placeholder="State" name="state" required>
+            </div>
+            <div class="input-box">
+                <label for="postalcode">postalcode </label>
+                <input type="postalcode" placeholder="postalcode" name="postalcode" required>
+            </div>
+            </div>
+            <div class="alert">
+                <p>by clicking sign up, you agree to our <a href="#">Terms,</a> <a href="#">privacy and policy</a>
+                    <a href="#">cookies policy.</a> you may receive sms notification from us and can opt at any time.</p>
+            </div>
+            <div class="button-container">
+               <button> <a style="text-decoration: none; color: white;" href="page2.html">Register</a></button>
+            </div>
+         </form>
+    </div>
+</body>
+</html>
